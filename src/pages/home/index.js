@@ -6,7 +6,7 @@ import { useParams, Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [data, setData] = useState(null);
-  const { type } = useParams(); // Fix me!
+  const { type } = useParams();
 
   useEffect(() => {
     async function getPetsData() {
@@ -32,7 +32,7 @@ const HomePage = () => {
       {data.length ? (
         <div className="grid">
           {data.map((animal) => (
-            <Link // Change me to a Link!
+            <Link 
               key={animal.id}
               to={`/${animal.type.toLowerCase()}/${animal.id}`}
               className="pet"
@@ -55,7 +55,7 @@ const HomePage = () => {
                 <p>Color: {animal.colors.primary}</p>
                 <p>Gender: {animal.gender}</p>
               </article>
-            </Link> // Don't forget to change me!
+            </Link> 
           ))}
         </div>
       ) : (

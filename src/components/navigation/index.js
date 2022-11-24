@@ -24,7 +24,6 @@ const Navigation = () => {
       </div>
       <ul className="nav-links">
         <li key="all">
-          {/* This link should have an activeClassName and exact prop */}
           <NavLink
            exact to="/"
             className="nav-link"
